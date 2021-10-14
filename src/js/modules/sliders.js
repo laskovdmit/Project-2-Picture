@@ -1,4 +1,4 @@
-const sliders = (slides, dir, prev, next) => {
+const sliders = (slides, dir, prev, next, interval) => {
     let slideIndex = 1,
         paused = false;
 
@@ -49,13 +49,13 @@ const sliders = (slides, dir, prev, next) => {
             paused = setInterval(() => {
                 changeSlides(1);
                 items[slideIndex - 1].classList.add('slideInDown');
-            }, 3000);
+            }, interval);
         } else {
             paused = setInterval(() => {
                 changeSlides(1);
                 items[slideIndex - 1].classList.remove('slideInRight');
                 items[slideIndex - 1].classList.add('slideInLeft');
-            }, 3000);
+            }, interval);
         }
     }
 
