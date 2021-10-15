@@ -6,7 +6,8 @@ import checkTextInputs from './modules/checkTextInputs';
 import showMoreStyles from './modules/showMoreStyles';
 import calc from './modules/calc';
 import filter from './modules/filter';
-import pictureSize from "./modules/pictureSize";
+import pictureSize from './modules/pictureSize';
+import accordion from './modules/accordion';
 
 window.addEventListener('DOMContentLoaded', () => {
     'use strict';
@@ -24,4 +25,5 @@ window.addEventListener('DOMContentLoaded', () => {
     calc(sumObj, '#size', '#material', '#options', '.promocode', '.calc-price');
     filter('.portfolio-menu', '.portfolio-wrapper', '.portfolio-no', 'active');
     pictureSize('.sizes-block');
+    accordion('.accordion-heading', '.accordion-block');
 });
