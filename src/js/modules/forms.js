@@ -1,6 +1,6 @@
 import {postData} from "../services/requests";
 
-const forms = () => {
+const forms = (total) => {
     const allForms = document.querySelectorAll('form'),
           inputs = document.querySelectorAll('input'),
           upload = document.querySelectorAll('[name="upload"]');
@@ -18,7 +18,6 @@ const forms = () => {
         designer: 'assets/server.php',
         question: 'assets/question.php'
     };
-
 
     const clearInputs = (form) => {
         inputs.forEach(item => item.value = "");
@@ -69,6 +68,10 @@ const forms = () => {
 
             const formData = new FormData(form);
             let api;
+
+            if (form.closest('.calc')) {
+                formData.append('sum', total.sum);
+            }
 
             form.closest('.popup-design') || form.classList.contains('calc_form') ? api = path.designer : api = path.question;
             console.log(api);

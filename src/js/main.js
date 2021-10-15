@@ -4,16 +4,20 @@ import forms from './modules/forms';
 import mask from './modules/mask';
 import checkTextInputs from './modules/checkTextInputs';
 import showMoreStyles from './modules/showMoreStyles';
+import calc from './modules/calc';
 
 window.addEventListener('DOMContentLoaded', () => {
     'use strict';
     
+    let sumObj = {};
+
     modals();
     sliders('.feedback-slider-item', 'horisontal', '.main-prev-btn', '.main-next-btn', 3000);
     sliders('.main-slider-item', 'vertical', '', '', 6000);
-    forms();
+    forms(sumObj);
     mask('[name="phone"]');
     checkTextInputs('[name="name"]');
     checkTextInputs('[name="message"]');
     showMoreStyles('.button-styles', '#styles .row');
+    calc(sumObj, '#size', '#material', '#options', '.promocode', '.calc-price');
 });
