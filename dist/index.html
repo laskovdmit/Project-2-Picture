@@ -10,7 +10,7 @@
 </head>
 <body>
 	<img class="fixed-gift wow pulse infinite" src=assets/img/gift.png alt>
-	<header class=header>
+	<header id="up" class=header>
 		<div class=container>
 			<div class="col-md-2 col-sm-3 col-xs-6">
 				<button class=burger>
@@ -210,20 +210,20 @@
 							<div>Файл не выбран</div>
 							<input type=file name=upload>
 						</div>
-						<select id=size>
+						<select id=size name="size">
 							<option value>Выберите размер картины</option>
 							<option value='1'>40x50</option>
 							<option value='2'>50x70</option>
 							<option value='3'>70x70</option>
 							<option value='4'>70x100</option>
 						</select>
-						<select id=material>
+						<select id=material name="material">
 							<option value>Выберите материал картины</option>
 							<option value='1' title="Изящный, позволяет легко создавать текстуру, подходит для декоративных картин маслом.">Холст из волокна</option>
 							<option value='2' title="Достаточно грубый и создает ощущение реальности, подходит для классических пейзажей, натюрмортов и портретов.">Льняной холст</option>
 							<option value='3' title="Изящный, подходит для всех типов реалистичных портретов.">Холст из натурального хлопка</option>
 						</select>
-						<select id=options>
+						<select id=options name="options">
 							<option value='0'>Дополнительные услуги</option>
 							<option value='1'>Покрытие арт-гелем</option>
 							<option value='2'>Экспресс-изготовление</option>
@@ -680,6 +680,11 @@
 			</div>
 		</div>
 	</div>
+	<a href="#up" class="pageup">
+		<svg class="up" viewBox="0 0 26 26" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+			<path fill-rule="evenodd" clip-rule="evenodd" d="M26 0H0V26H26V0ZM4.6593 17.7519L13.1233 10.33L21.5873 17.7519L22.9059 16.2481L13.7826 8.24813L13.1233 7.67L12.464 8.24813L3.3407 16.2481L4.6593 17.7519Z" fill="black"/>
+		</svg>
+	</a>
 	<script src="script.js"></script>
 </body>
 </html>
