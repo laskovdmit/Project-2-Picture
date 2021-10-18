@@ -1,4 +1,4 @@
-import {postData} from "../services/requests";
+import {postData} from '../services/requests';
 
 const forms = (total) => {
     const allForms = document.querySelectorAll('form'),
@@ -25,8 +25,8 @@ const forms = (total) => {
             item.previousElementSibling.textContent = 'Файл не выбран';
         });
         try {
-            form.querySelector('textarea').value = "";
-        } catch {}
+            form.querySelector('textarea').value = '';
+        } catch(err) {}
     };
 
     upload.forEach(item => {
@@ -65,12 +65,12 @@ const forms = (total) => {
             const formData = new FormData(form);
             let api;
 
+            form.closest('.popup-design') || form.classList.contains('calc_form') ? api = path.designer : api = path.question;
+            console.log(api);
+
             if (form.closest('.calc')) {
                 formData.append('sum', total.sum);
             }
-
-            form.closest('.popup-design') || form.classList.contains('calc_form') ? api = path.designer : api = path.question;
-            console.log(api);
 
             postData(api, formData)
                 .then(res => {

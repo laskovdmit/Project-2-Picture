@@ -1,12 +1,6 @@
 import {postData} from "../services/requests";
 
 const drop = () => {
-    // drag, dragend, dragexit, dragstart
-    // dragenter - объект над dropArea
-    // dragleave - объект за пределами dropArea
-    // dragover - объект зависает над dropArea
-    // drop - объект отправлен а dropArea
-
     const fileInputs = document.querySelectorAll('[name="upload"]');
 
     ['dragenter', 'dragleave', 'dragover', 'drop'].forEach(eventName => {
@@ -21,19 +15,19 @@ const drop = () => {
     }
 
     function highlight(item) {
-        item.closest('.file_upload').style.border = "5px solid #c818bc"; 
-        item.closest('.file_upload').style.backgroundColor = "rgba(0, 0, 0, 0.2)"; 
+        item.closest('.file_upload').style.border = '5px solid #c818bc'; 
+        item.closest('.file_upload').style.backgroundColor = 'rgba(0, 0, 0, 0.2)'; 
     }
     
     function unhighlight(item) {
-        item.closest('.file_upload').style.border = "none"; 
+        item.closest('.file_upload').style.border = 'none'; 
 
         if (item.closest('.calc_form')) {
-            item.closest('.file_upload').style.backgroundColor = "#fff"; 
+            item.closest('.file_upload').style.backgroundColor = '#fff'; 
         } else if (item.closest('.main')) {
-            item.closest('.file_upload').style.backgroundColor = "#f7e7e6"; 
+            item.closest('.file_upload').style.backgroundColor = '#f7e7e6'; 
         } else{
-            item.closest('.file_upload').style.backgroundColor = "#ededed"; 
+            item.closest('.file_upload').style.backgroundColor = '#ededed'; 
         }
     }
 
@@ -81,10 +75,6 @@ const drop = () => {
             }
         });
     });
-
-    const mainFileInput = document.querySelector('.main [name="upload"]');
-
-    mainFileInput
 };
 
 export default drop;

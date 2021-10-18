@@ -5,7 +5,7 @@ const filter = (menuSelector, wrapperSelector, notFoundSelector, activeClass) =>
 
     function clearStyle() {
         wrapper.children.forEach(block => {
-            block.style.display = "none";
+            block.style.display = 'none';
             block.classList.remove('animated', 'fadeIn');
         });
 
@@ -23,8 +23,7 @@ const filter = (menuSelector, wrapperSelector, notFoundSelector, activeClass) =>
         
         clearStyle();
 
-        if (target && target.nodeName === "LI") {
-
+        if (target && target.nodeName === 'LI') {
             wrapper.children.forEach(block => {
                 if (block.classList.contains(target.className)) {
                     block.classList.add('animated', 'fadeIn');

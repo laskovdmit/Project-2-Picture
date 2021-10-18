@@ -1,8 +1,7 @@
-const accordion = (triggerSelector, blockSelector) => {
-    const triggers = document.querySelectorAll(triggerSelector),
-          blocks = document.querySelectorAll(blockSelector);
+const accordion = (triggerSelector) => {
+    const triggers = document.querySelectorAll(triggerSelector);
 
-    triggers.forEach((btn, i) => {
+    triggers.forEach(btn => {
         btn.addEventListener('click', function() {
             triggers.forEach(item => {
                 if (item.classList.contains('active-style') && item !== this) {

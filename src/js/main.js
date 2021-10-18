@@ -28,7 +28,7 @@ window.addEventListener('DOMContentLoaded', () => {
     calc(sumObj, '#size', '#material', '#options', '.promocode', '.calc-price');
     filter('.portfolio-menu', '.portfolio-wrapper', '.portfolio-no', 'active');
     pictureSize('.sizes-block');
-    accordion('.accordion-heading', '.accordion-block');
+    accordion('.accordion-heading');
     burger('.burger-menu', '.burger');
     scrolling('.pageup');
     drop();

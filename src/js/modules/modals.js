@@ -25,7 +25,7 @@ const modals = () => {
         }
         
         if (gift && moveStatus === 'back') {
-            gift.style.right = "";
+            gift.style.right = '';
         }
     }
 
@@ -41,9 +41,9 @@ const modals = () => {
                 item.style.display = 'none';
                 item.classList.add('animated', 'fadeIn');
             });
-            visibleModal.style.display = "block";
+            visibleModal.style.display = 'block';
 
-            document.body.style.overflow = "hidden";
+            document.body.style.overflow = 'hidden';
             document.body.style.marginRight = `${scroll}px`;
             moveGiftPosition('forward');
         }
@@ -55,7 +55,7 @@ const modals = () => {
                 item.style.display = 'none';
             });
 
-            document.body.style.overflow = "";
+            document.body.style.overflow = '';
             document.body.style.marginRight = '0px';
             moveGiftPosition('back');
         }
@@ -91,13 +91,13 @@ const modals = () => {
 
             document.querySelectorAll('[data-modal]').forEach(item => {
                 if (getComputedStyle(item).display !== 'none') {
-                    display = "block";
+                    display = 'block';
                 }
             });
 
             if (!display) {
                 document.querySelector(selector).style.display = 'block';
-                document.body.style.overflow = "hidden";
+                document.body.style.overflow = 'hidden';
                 
                 document.body.style.marginRight = `${scroll}px`;
                 moveGiftPosition('forward');
@@ -115,13 +115,11 @@ const modals = () => {
         });
     }
 
-
     bindModal('.button-design', '.popup-design', '.popup-design .popup-close');
     bindModal('.button-consultation', '.popup-consultation', '.popup-consultation .popup-close');
     bindModal('.fixed-gift', '.popup-gift', '.popup-gift .popup-close', true);
-    // showModalByTime('.popup-consultation', 60000);
+    showModalByTime('.popup-consultation', 60000);
     showByScroll('.fixed-gift');
-
 };
 
 export default modals;

@@ -1,4 +1,4 @@
-import { getResource } from "../services/requests";
+import { getResource } from '../services/requests';
 
 const calc = (total, size, material, options, promocode, output) => {
     const sizeSelect = document.querySelector(size),
@@ -12,7 +12,7 @@ const calc = (total, size, material, options, promocode, output) => {
             .then(res => {
                 total.sum = Math.floor((+res.size[sizeSelect.value] * +res.material[materialSelect.value]) + +res.options[optionsSelect.value]);
 
-                if (sizeSelect.value === "" || materialSelect.value === "") {
+                if (sizeSelect.value === '' || materialSelect.value === '') {
                     outputField.textContent = 'Для расчета нужно выбрать размер картины и материал картины';
                 } else if (promocodeInput.value === 'IWANTPOPART') {
                     total.sum = Math.floor(+total.sum * 0.7);
